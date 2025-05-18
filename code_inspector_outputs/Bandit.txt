@@ -1,0 +1,284 @@
+bandit -r .
+[main]  INFO    profile include tests: None
+[main]  INFO    profile exclude tests: None
+[main]  INFO    cli include tests: None
+[main]  INFO    cli exclude tests: None
+[main]  INFO    running on Python 3.10.1
+Run started:2025-05-18 15:04:24.737294
+
+Test results:
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\tests\test_enemy.py:22:4
+21          """Tests if the enemy initializes correctly."""
+22          assert enemy.x == 100
+23          assert enemy.y == 100
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\tests\test_enemy.py:23:4
+22          assert enemy.x == 100
+23          assert enemy.y == 100
+24          assert enemy.speed == 5
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\tests\test_enemy.py:24:4
+23          assert enemy.y == 100
+24          assert enemy.speed == 5
+25          assert isinstance(enemy.direction, tuple)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\tests\test_enemy.py:25:4
+24          assert enemy.speed == 5
+25          assert isinstance(enemy.direction, tuple)
+26
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\tests\test_enemy.py:31:4
+30          enemy.move(player_x=200, player_y=200)  # Simulate movement
+31          assert (enemy.x, enemy.y) != (prev_x, prev_y)  # Enemy should move
+32
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\tests\test_enemy.py:38:4
+37          enemy.move(player_x=200, player_y=200)
+38          assert enemy.direction != (0, 1)  # Direction should change
+39
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\tests\test_enemy.py:45:4
+44          enemy.chase_player(player_x, player_y)
+45          assert abs(enemy.x - player_x) + abs(enemy.y - player_y) < abs(prev_x - player_x) + abs(prev_y - player_y)
+46
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\tests\test_enemy.py:50:4
+49          player_x, player_y = enemy.x, enemy.y  # Player and enemy in the same spot
+50          assert enemy.check_collision(player_x, player_y) == True
+51
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\tests\test_enemy.py:53:4
+52          player_x, player_y = enemy.x + CELL_SIZE * 2, enemy.y + CELL_SIZE * 2  # Player far away
+53          assert enemy.check_collision(player_x, player_y) == False
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\tests\test_level.py:11:4
+10          """Tests if the level initializes correctly with correct attributes."""
+11          assert level.width == 21
+12          assert level.height == 11
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\tests\test_level.py:12:4
+11          assert level.width == 21
+12          assert level.height == 11
+13          assert isinstance(level.grid, list)
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\tests\test_level.py:13:4
+12          assert level.height == 11
+13          assert isinstance(level.grid, list)
+14          assert len(level.grid) == level.height  # Correct number of rows
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\tests\test_level.py:14:4
+13          assert isinstance(level.grid, list)
+14          assert len(level.grid) == level.height  # Correct number of rows
+15          assert len(level.grid[0]) == level.width  # Correct number of columns
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\tests\test_level.py:15:4
+14          assert len(level.grid) == level.height  # Correct number of rows
+15          assert len(level.grid[0]) == level.width  # Correct number of columns
+16
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\tests\test_level.py:20:4
+19          level.generate_maze(1, 1)
+20          assert level.grid[1][1] == "."  # The starting position should be open
+21          assert level.get_tile_count() > 0  # Ensure some tiles are opened
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\tests\test_level.py:21:4
+20          assert level.grid[1][1] == "."  # The starting position should be open
+21          assert level.get_tile_count() > 0  # Ensure some tiles are opened
+22
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\tests\test_level.py:27:4
+26          level.create_crossroad(5, 5)
+27          assert level.get_tile_count() > prev_tile_count  # More tiles should be open
+28
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\tests\test_level.py:33:4
+32          open_tiles = level.get_tile_count()
+33          assert open_tiles == sum(row.count(".") for row in level.grid)  # Dynamic check
+34
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\tests\test_level.py:39:4
+38          captured = capsys.readouterr()
+39          assert len(captured.out.strip()) > 0  # Output should not be empty
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\tests\test_player.py:32:4
+31          """Tests if the player initializes correctly."""
+32          assert player.x == 100
+33          assert player.y == 100
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\tests\test_player.py:33:4
+32          assert player.x == 100
+33          assert player.y == 100
+34          assert player.current_animation == "idle"
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\tests\test_player.py:34:4
+33          assert player.y == 100
+34          assert player.current_animation == "idle"
+35
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\tests\test_player.py:39:4
+38          """Checks if the grid position function works correctly."""
+39          assert player.get_grid_position() == (100 // CELL_SIZE, 100 // CELL_SIZE)
+40
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\tests\test_player.py:44:4
+43          """Ensures the player can move within valid positions."""
+44          assert player.can_move(150, 150) == True  # Inside the grid
+45          assert player.can_move(-50, -50) == False  # Out of bounds
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\tests\test_player.py:45:4
+44          assert player.can_move(150, 150) == True  # Inside the grid
+45          assert player.can_move(-50, -50) == False  # Out of bounds
+46
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   CWE: CWE-703 (https://cwe.mitre.org/data/definitions/703.html)
+   More Info: https://bandit.readthedocs.io/en/1.8.3/plugins/b101_assert_used.html
+   Location: .\tests\test_player.py:52:4
+51          player.update_animation()
+52          assert player.frame_index == 1
+53
+
+--------------------------------------------------
+
+Code scanned:
+        Total lines of code: 517
+        Total lines skipped (#nosec): 0
+
+Run metrics:
+        Total issues (by severity):
+                Undefined: 0
+                Low: 26
+                Medium: 0
+                High: 0
+        Total issues (by confidence):
+                Undefined: 0
+                Low: 0
+                Medium: 0
+                High: 26
+Files skipped (0):
